@@ -1,0 +1,47 @@
+{
+  "name": "dougs-react-boiler",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^7.1.2",
+    "firebase": "^8.10.0",
+    "formik": "^2.2.6",
+    "node-sass": "^7.0.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-flexbox-grid": "^2.1.2",
+    "react-ga": "^3.3.0",
+    "react-helmet-async": "^1.2.2",
+    "react-router-dom": "^5.3.0",
+    "react-router-hash-link": "^2.4.0",
+    "yup": "^0.29.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.3%",
+      "not ie 11",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      ">0.3%",
+      "not ie 11",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.0"
+  }
+}
