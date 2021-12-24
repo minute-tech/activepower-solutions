@@ -22,8 +22,8 @@ input[type="email"]:focus,
 input[type="number"]:focus,
 textarea:focus,
 select:focus {
-  outline-color: $blue;
-  box-shadow: 0 0 2pt 1pt $blue;
+  outline-color: $orange-red;
+  box-shadow: 0 0 2pt 1pt $orange-red;
 }
 
 textarea {
@@ -39,21 +39,60 @@ textarea {
 }
 
 // Buttons
-.md-blue-btn {
-  background-color: $blue;
+.md-golden-btn {
+  background-color: $golden;
   font-family: $roboto-bold !important;
   font-size: 16px;
   border-radius: 4px;
   padding: 10px 35px;
   color: $white;
-  border: $light-grey solid 1px; 
+  border: $light-golden solid 1px; 
   cursor: pointer;
 }
 
-.md-blue-btn:hover {
-  background-color: $light-blue;
+.md-golden-btn:hover {
+  background-color: $light-golden;
 }
 
-.md-blue-btn:focus { 
+.md-golden-btn:focus { 
   border: none;
 }
+
+.md-orange-red-btn {
+    background-color: $orange-red;
+    font-family: $roboto-bold !important;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 10px 35px;
+    color: $white;
+    border: $light-orange-red solid 1px; 
+    cursor: pointer;
+  }
+  
+  .md-orange-red-btn:hover {
+    background-color: $orange-red;
+  }
+  
+  .md-orange-red-btn:focus { 
+    border: none;
+  }
+
+
+  .lg-orange-red-btn {
+    background-color: $orange-red;
+    font-family: $roboto-bold !important;
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 14px 40px;
+    color: $white;
+    border: $light-orange-red solid 1px; 
+    cursor: pointer;
+  }
+  
+  .lg-orange-red-btn:hover {
+    background-color: $orange-red;
+  }
+  
+  .lg-orange-red-btn:focus { 
+    border: none;
+  }

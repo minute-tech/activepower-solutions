@@ -34,7 +34,7 @@ class ErrorBoundary extends React.Component {
                 </p>
                 <hr/>
                 <div className="center-text sm-margin-t-b">
-                    <Link to="/"><button className="md-blue-btn">Return to home page</button></Link>
+                    <Link to="/"><button className="md-golden-btn">Return to home page</button></Link>
                 </div>
             
            

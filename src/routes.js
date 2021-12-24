@@ -10,6 +10,8 @@ import About from './components/pages/About';
 import Credits from './components/pages/Credits';
 import Test from './components/pages/Test.js';
 import ErrorBoundary from './components/misc/ErrorBoundary';
+import Terms from './components/pages/Terms';
+import PrivacyPolicy from './components/misc/PrivacyPolicy';
 
 class Routes extends Component {
     render() {
@@ -34,6 +36,31 @@ class Routes extends Component {
                         withTracker(() => (
                                 <ErrorBoundary>
                                     <About />
+                                </ErrorBoundary>
+                            )
+                        )
+                    } 
+                />
+                <Route 
+                    exact 
+                    path="/terms-conditions" 
+                    component={
+                        withTracker(() => (
+                                <ErrorBoundary>
+                                    <Terms />
+                                </ErrorBoundary>
+                            )
+                        )
+                    } 
+                />
+                
+                <Route 
+                    exact 
+                    path="/privacy-policy" 
+                    component={
+                        withTracker(() => (
+                                <ErrorBoundary>
+                                    <PrivacyPolicy />
                                 </ErrorBoundary>
                             )
                         )

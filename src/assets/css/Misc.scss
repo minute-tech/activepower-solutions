@@ -9,23 +9,23 @@
 .sm-border {
     border-style: solid;
     border-width: 1px;
-    border-color: $blue;
+    border-color: $orange-red;
 }
 
 .md-border {
     border-style: solid;
     border-width: 3px;
-    border-color: $blue;
+    border-color: $orange-red;
 }
 
 .lg-border {
     border-style: solid;
     border-width: 5px;
-    border-color: $blue;
+    border-color: $orange-red;
 }
 
 .left-border {
-    border-left: 6px solid $blue;
+    border-left: 6px solid $orange-red;
     padding: 10px 0px 10px 5px;
 }
 
@@ -90,6 +90,14 @@
     background: $black
 }
 
+.bg-orange-red {
+    background: $orange-red
+}
+
+.bg-golden {
+    background: $golden;
+}
+
 /* 
 * Table 
 */
@@ -102,7 +110,7 @@ table caption {
     font-size: 1.5em;
     font-weight: bolder;
     margin: .5em 0 .75em;
-    color: $blue;
+    color: $orange-red;
     text-align: left;
 }
 
@@ -117,20 +125,129 @@ th, td {
 }
 
 thead {
- background-color: $light-blue;
+ background-color: $light-orange-red;
  color: $white;
 }
 
 tbody tr:hover {
-    background-color: $xlight-blue;
+    background-color: $xlight-orange-red;
 }
+/* Slanted backgrounds */
+// mixin
+@mixin angle($pseudo, $flip: false, $angle: 3deg) {
+    // Possible values for $pseudo are: before, after, both
+    @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+      position: relative;
+      z-index: 1;
+      $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
+  
+      #{$selector} {
+        background: inherit;
+        content: '';
+        display: block;
+        height: 50%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        -webkit-backface-visibility: hidden; // for Chrome Windows
+        backface-visibility: hidden;
+      }
+  
+      @if $pseudo == 'before' {
+        #{$selector} {
+          top: 0;
+  
+          @if $flip {
+            transform: skewY($angle * -1);
+            transform-origin: 0 0;
+          } @else {
+            transform: skewY($angle);
+            transform-origin: 100% 0;
+          }
+        }
+      }
+  
+      @if $pseudo == 'after' {
+        #{$selector} {
+          bottom: 0;
+  
+          @if $flip {
+            transform: skewY($angle);
+            transform-origin: 0 100%;
+          } @else {
+            transform: skewY($angle * -1);
+            transform-origin: 100%;
+          }
+        }
+      }
+  
+      @if $pseudo == 'both' {
+        &:before {
+          top: 0;
+  
+          @if $flip {
+            transform: skewY($angle * -1);
+            transform-origin: 0 0;
+          } @else {
+            transform: skewY($angle);
+            transform-origin: 100% 0;
+          }
+        }
+  
+        &:after {
+          bottom: 0;
+  
+          @if $flip {
+            transform: skewY($angle);
+            transform-origin: 0 0;
+          } @else {
+            transform: skewY($angle * -1);
+            transform-origin: 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  // slanted edges here
+  .edge--bottom {
+    @include angle(after);
+  }
+  
+  .edge--bottom--reverse {
+    @include angle(after, true);
+  }
+  
+  .edge--top {
+    @include angle(before);
+  }
+  
+  .edge--top--reverse {
+    @include angle(before, true);
+  }
+  
+  .edge--both {
+    @include angle(both);
+  }
+  
+  .edge--both--reverse {
+    @include angle(both, true);
+  }
+  
+  .slant-block {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 100px 0;
+    padding: 100px 20px;
+  }
 
 /* 
 * Card 
 */
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    transition: 0.4s;
     width: 100%;
     border-radius: 5px;
     overflow: hidden;
@@ -151,8 +268,47 @@ tbody tr:hover {
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+// Hero
+.hero-container {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/activepower-solutions.appspot.com/o/public%2Fbg-bulb.png?alt=media&token=e15c33c2-b609-43d5-86f2-195eb85f2573');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    padding-bottom: 45%;
+}
 
-/* Full width backgrounds */
+.hero-content {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction	: column;
+    -ms-flex-direction		  : column;
+    flex-direction			    : column;
+    -webkit-justify-content	: center; 
+    justify-content			    : center; 
+    position: absolute;
+    top: 0; bottom: 0; left: 100px; right: 30px;
+    max-width: 60%;
+}
+
+@media only screen and (max-width: 900px) {
+   .hero-container {
+        padding-bottom: 10%;
+        background-image: url('https://firebasestorage.googleapis.com/v0/b/activepower-solutions.appspot.com/o/public%2Fbg-bulb.png?alt=media&token=e15c33c2-b609-43d5-86f2-195eb85f2573');
+   }
+   .hero-content {
+        position: relative;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 2;
+        padding: 30px;
+        max-width: 100%;
+   }
+}
 
 
 

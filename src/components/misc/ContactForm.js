@@ -102,11 +102,11 @@ export default class ContactForm extends Component {
                                         )}
                                     </Col>
                                 </Row>
-                                <Row className="md-margin-b">
+                                <Row className="md-margin-b" center="xs">
                                     <Col xs={12}>
                                         <button 
                                             type="submit"
-                                            className="md-blue-btn" 
+                                            className="md-golden-btn" 
                                             disabled={!props.dirty && !props.isSubmitting}>
                                                 Submit
                                         </button>

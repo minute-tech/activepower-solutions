@@ -14,7 +14,7 @@ export const onMessageCreated = functions.firestore.document('messages/{messageI
         const htmlEmail = 
         `
         <div>
-            <h2>New <u>Doug's React Boiler</u> Website Contact</h2>
+            <h2>New <u>Active Power Solutions</u> Website Contact</h2>
             <p>
                 A new contact message has arrived! You can directly reply to this email to 
                 contact the visitor back on their question or inquiry if need be. Their information and message is detailed below.
@@ -41,9 +41,9 @@ export const onMessageCreated = functions.firestore.document('messages/{messageI
         // Pack it
         const mailOptions = {
             from: `drcj.dev@gmail.com`,
-            to: 'douglasrcjames@gmail.com, drcj.dev@gmail.com',
+            to: 'michele@interiormotivesla.com, drcj.dev@gmail.com',
             replyTo: `${newValue.email}`,
-            subject: `New Doug's React Boiler contact from ${newValue.name}`,
+            subject: `New Active Power Solutions contact from ${newValue.name}`,
             text: newValue.message,
             html: htmlEmail
         }

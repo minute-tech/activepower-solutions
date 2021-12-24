@@ -1,5 +1,5 @@
 {
-  "name": "dougs-react-boiler",
+  "name": "activepower.solutions",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "firebase": "^8.10.0",
     "formik": "^2.2.6",
+    "google-maps-react": "^2.0.6",
     "node-sass": "^7.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",

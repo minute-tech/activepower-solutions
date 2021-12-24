@@ -1,5 +1,12 @@
 /*//*/ /*/ Variables /*/ /*//*/
-// TODO: update colors and fonts if you like
+
+$orange-red: #D3321D;
+$light-orange-red: #DC5B4A;
+$xlight-orange-red: #EA9D92;
+$golden: #F7BA2C;
+$light-golden: #F9C856;
+$xlight-golden: #FAD680;
+
 //// Colors ////
 $white: #fff;
 $black: #000;
@@ -67,3 +74,85 @@ $roboto-bold: "Roboto-Bold", "Arial Bold", sans-serif;
 $roboto-black: "Roboto-Black", "Arial Black", sans-serif;
 $roboto-italic: "Roboto-Italic", "Arial Italic", sans-serif;
 // TODO note: Roboto as primary, Arial if Roboto not available, then just an Sans-Serif if Arial not available
+
+// Animation underline
+  // mixin
+  @mixin hover-underline($type: fade, $dir: null, $weight: 2px, $color: $golden) {
+    @if $dir == null {
+      @if $type == fade {
+        $dir: 'top';
+      } @else if $type == slide {
+        $dir: 'center';
+      }
+    }
+  
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    &::after {
+      position: absolute;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: $weight;
+      background: $color;
+      @if $type == fade {
+        transition: .4s;
+        opacity: 0;
+        visibility: hidden;
+        @if $dir == bottom {
+          bottom: $weight * -4;
+        } @else {
+          bottom: $weight;
+        }
+      } @else if $type == slide {
+        bottom: $weight * -2;
+        transform: scale(0, 1);
+        transition: transform .4s;
+        @if $dir == left-right or $dir == right-in-left {
+          transform-origin: left top;
+        } @else if $dir == right-left or $dir == left-in-right {
+          transform-origin: right top;
+        } @else {
+          transform-origin: center top;
+        }
+      }
+    }
+    &:hover::after {
+      @if $type == fade {
+        bottom: $weight * -2;
+        opacity: 1;
+        visibility: visible;
+      } @else if $type == slide {
+        @if $dir == left-in-right {
+          transform-origin: left top;
+        } @else if $dir == right-in-left {
+          transform-origin: right top;
+        }
+        transform: scale(1, 1);
+      }
+    }
+  }
+  
+  // usage
+  .example01 a {
+    @include hover-underline('fade', 'top');
+  }
+  .example02 a {
+    @include hover-underline('fade', 'bottom');
+  }
+  .example03 a {
+    @include hover-underline('slide', 'left-right');
+  }
+  .example04 a {
+    @include hover-underline('slide', 'right-left');
+  }
+  .example05 a {
+    @include hover-underline('slide', 'left-in-right');
+  }
+  .example06 a {
+    @include hover-underline('slide', 'right-in-left');
+  }
+  .example07 a {
+    @include hover-underline('slide', 'center');
+  }
