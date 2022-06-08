@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
-import logo from "../../assets/images/logos/logo512.png"
 import SimpleMap from '../misc/SimpleMap';
 export default class About extends Component {
 
@@ -18,16 +16,13 @@ export default class About extends Component {
                     </p>
 
                     <p>
-                        Mollit ipsum ex mollit incididunt esse ad magna deserunt est aliquip et commodo sint magna. Voluptate do est eiusmod nulla esse exercitation in voluptate dolore elit. 
-                        Consectetur magna velit tempor adipisicing cupidatat laborum Lorem veniam duis excepteur ut sint id.
+                        Active power solutions in a full service electrical company that provides great electrical services for residential and commercial. There is no job too small or large that our team can't do. 
+                        We make it a priority to stay up to date with the always changing electrical codes. We provide 24/7 emergency service. 
                     </p>
-                    <p>
-                        Lorem incididunt ipsum eiusmod elit in consequat commodo minim reprehenderit nulla occaecat. 
-                        Aliqua commodo enim deserunt elit eu. Sint ipsum aute dolor aliqua proident irure sint dolor adipisicing commodo pariatur amet. 
-                        Excepteur nisi laboris sit pariatur aliqua non laborum magna. Sint velit officia ipsum enim id irure cillum. Laborum culpa ad veniam non incididunt. 
-                        Laborum esse laboris nulla ea est officia quis sit dolore aliqua ipsum sint exercitation.
-                        
-                    </p>
+                    
+                    <h3 style={{textAlign: "center"}}>
+                        Call us for a free quote today! You can trust our technicians for quality work.<br/> Licensed and bonded. CSLB: 1081847
+                    </h3>
                 </div>
                 
                 <SimpleMap />

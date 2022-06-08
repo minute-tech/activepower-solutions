@@ -30,61 +30,37 @@ export default class Home extends Component {
                 <div className="wrapper white">
                     <h1 className="white no-margin">What do we offer?</h1>
                     <p>
-                       Amet tempor deserunt eu aliquip consequat aliquip fugiat exercitation. Ullamco proident quis irure laborum occaecat ad. Do tempor culpa officia occaecat incididunt officia ad ipsum dolore deserunt.
+                        Whether you need a whole house rewire or just a light switch replaced, you can trust Active Power Solutions for great services at honest prices.
                     </p>
                     <Grid fluid>
-                        <Row center="xs">
+                        <Row center="xs" className="sm-margin">
                             <Col xs={12} sm={3}>
-                                <i className="fas fa-bolt xl-icon yellow" />
-                                <h3>Yellow Column</h3>
-                                <p>More information below</p>
+                                <i className="fas fa-bolt xl-icon yellow md-margin" />
+                                <h3>Electrical panel upgrades</h3>
+                                <p>Whether you need a panel upgrade or replacing that old electrical panel we have you covered</p>
                             </Col>
                             <Col xs={12} sm={3}>
-                                <i className="fas fa-car-battery xl-icon orange" />
-                                <h3>Orange Column</h3>
-                                <p>More information below</p>
+                                <i className="fas fa-car xl-icon green md-margin" />
+                                <h3>Electric car chargers </h3>
+                                <p>Need to add an electrical outlet for that new car? Our technicians are familiar with all makes and models of electric vehicles.</p>
                             </Col>
                             <Col xs={12} sm={3}>
-                                <i className="fas fa-plug xl-icon blue" />
-                                <h3>Red Column</h3>
-                                <p>More information below</p>
+                                <i className="fas fa-lightbulb xl-icon yellow md-margin" />
+                                <h3>LED lighting</h3>
+                                <p>We specialize in both indoor and outdoor LED lighting.</p>
                             </Col>
                             <Col xs={12} sm={3}>
-                                <i className="fas fa-seedling xl-icon green" />
-                                <h3>Green Column</h3>
-                                <p>More information below</p>
+                                <i className="fas fa-plug xl-icon blue md-margin" />
+                                <h3>Electrical Troubleshooting</h3>
+                                <p>You can trust us to address and fix your electrical problems quickly and safely.</p>
                             </Col>
                         </Row>
                     </Grid>
-                    <p>
-                        Ut eu ipsum ipsum et occaecat aliqua nostrud ex est minim. 
-                        Cupidatat ipsum ex voluptate ea eu aliqua enim eiusmod duis et veniam. Cupidatat nisi adipisicing velit ad 
-                        minim adipisicing cillum do excepteur excepteur laborum sit ea. Aliquip amet tempor velit anim voluptate eu. Culpa quis laborum laboris est cupidatat. 
-                        In cillum ipsum commodo laboris ex ad aute. Aute elit incididunt excepteur irure esse aliquip nisi amet ex quis.
-                        Ut eu ipsum ipsum et occaecat aliqua nostrud ex est minim. 
-                        Cupidatat ipsum ex voluptate ea eu aliqua enim eiusmod duis et veniam. Cupidatat nisi adipisicing velit ad 
-                        minim adipisicing cillum do excepteur excepteur laborum sit ea.
-                    </p>
-                    <p>
-                        Ut eu ipsum ipsum et occaecat aliqua nostrud ex est minim. 
-                        Cupidatat ipsum ex voluptate ea eu aliqua enim eiusmod duis et veniam. Cupidatat nisi adipisicing velit ad 
-                        minim adipisicing cillum do excepteur Aute elit incididunt excepteur irure esse aliquip nisi amet ex quis.
-                    </p>
-                    <p>
-                        Ut eu ipsum ipsum et occaecat aliqua nostrud ex est minim. 
-                        Cupidatat ipsum ex voluptate ea eu aliqua enim eiusmod duis et veniam. Cupidatat nisi adipisicing velit ad 
-                        minim adipisicing cillum do excepteur excepteur laborum sit ea.
-                        Ut eu ipsum ipsum et occaecat aliqua nostrud ex est minim. 
-                        Cupidatat ipsum Cupidatat ipsum ex voluptate ea eu aliqua enim eiusmod duis et veniam. Cupidatat nisi adipisicing velit ad 
-                        minim adipisicing cillum do excepteur excepteur laborum sit ea.
-                        Ut eu ipsum ipsum et occaecat aliqua nostrud ex est minim. 
-                    </p>
-                    <p>
-                        Ut eu ipsum ipsum et occaecat aliqua nostrud ex est minim. 
-                        Cupidatat ipsum ex voluptate ea eu aliqua enim eiusmod duis et veniam. Cupidatat nisi adipisicing velit ad 
-                        minim adipisicing cillum do excepteur excepteur laborum sit ea. Aliquip amet tempor velit anim voluptate eu. Culpa quis laborum laboris est cupidatat. 
-                        In cillum ipsum commodo laboris ex ad aute. Aute elit incididunt excepteur irure esse aliquip nisi amet ex quis.
-                    </p>
+                    <br/>
+                    <h3 style={{textAlign: "center"}}>
+                        Call us for a free quote today! You can trust our technicians for quality work.<br/> Licensed and bonded. CSLB: 1081847
+                    </h3>
+                   
                 </div>
             </div>
             <div className="wrapper">
